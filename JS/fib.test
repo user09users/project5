@@ -26,5 +26,23 @@ function fib(num) {
 console.log(fib(7));
 
 
+// ------------------------------------------------
+function fib(number) {
+    let a = 0;
+    let b = 1;
+    let ab = '';
+
+    // Starting from the third Fibonacci number (index 2)
+    for (let i = 2; i < number; i++) {
+        ab = a + b;
+        a = b;
+        b = ab;
+    }
+
+    // Return the nth Fibonacci number
+    return b;
+}
+
+console.log(fib(10)); // Should return 34
 
 
